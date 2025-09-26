@@ -1,0 +1,30 @@
+package com.automation.testNG;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class ParallelExecutionExample {
+	WebDriver driver;
+	@Test
+	public void openChrome() {
+		driver = new ChromeDriver();
+		driver.get("https://www.selenium.dev/downloads/");
+		System.out.println("Opened Google on Thread : " + Thread.currentThread().getId());
+		driver.quit();
+	}
+	@Test
+	public void openFireFox() {
+		driver = new ChromeDriver();
+		driver.get("https://www.selenium.dev/downloads/");
+		System.out.println("Opened Google on Thread : " + Thread.currentThread().getId());
+		driver.quit();
+	}
+	@Test
+	public void openYahoo() {
+		driver = new ChromeDriver();
+		driver.get("https://www.selenium.dev/downloads/");
+		System.out.println("Opened Google on Thread : " + Thread.currentThread().getId());
+		driver.quit();
+	}
+}
